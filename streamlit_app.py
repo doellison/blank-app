@@ -13,9 +13,9 @@ def 	decimal_to_dms(deg, is_latitude):
 @st.cache_data
 def load_coordinates ():
 	with open('worldcities.csv', newline='', encoding='utf-8') as csvfile:
-	reader = csv.reader(csvfile)
-	next(reader)
-	return [(float(row[2]), float(row[3])) for row in reader]
+		reader = csv.reader(csvfile)
+		next(reader)
+		return [(float(row[2]), float(row[3])) for row in reader]
 
 coordinates = load_coordinates()
 
