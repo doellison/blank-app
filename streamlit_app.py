@@ -27,7 +27,7 @@ if name:
 	random_coordinates = random.sample(coordinates, 10)
 	for i, (lat, lon) in enumerate(random_coordinates, 1):
 		lat_dms = decimal_to_dms(lat, is_latitude=True)
-		lon_dms = decimal_to_dms(lon, is latitude=False)
+		lon_dms = decimal_to_dms(lon, is_latitude=False)
 		st.write(f"{i}. \U0001F30E {lat_dms}, {lon_dms}")
 
 
