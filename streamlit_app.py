@@ -21,7 +21,7 @@ coordinates = load_coordinates()
 
 st.title("\U0001F310 Get Your Latitudes & Longitudes Here! \U0001F310")
 
-name - st.text_input('Enter your name:')
+name = st.text_input('Enter your name:')
 if name:
 	st.write(f"\U0001F4CD **{name}'s Coordinates:**")
 	random_coordinates = random.sample(coordinates, 10)
