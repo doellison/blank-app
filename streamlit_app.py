@@ -6,9 +6,8 @@ def 	decimal_to_dms(deg, is_latitude):
 	direction = ('N' if deg >= 0 else 'S') if is_latitude else ('E' if deg >= 0 else 'W')
 	deg = abs(deg)
 	d = int(deg)
-	m = int((deg - d) * 60)
-	s = round((deg - d - m / 60) * 3600, 2)
-	return f"{d}°{m}'{s}\"{direction}"
+	m = round((deg - d) * 60)
+	return f"{d}°{m}' {direction}"
 
 @st.cache_data
 def load_coordinates ():
