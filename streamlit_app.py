@@ -14,7 +14,10 @@ def load_coordinates ():
 	with open('worldcities.csv', newline='', encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		next(reader)
-		return [(float(row[2]), float(row[3])) for row in reader]
+		return [
+			(float(row[2]), float(row[3])) 
+			for row in reader
+			if row[-3].strip().lower() != "minor"
 
 coordinates = load_coordinates()
 
