@@ -17,7 +17,7 @@ def load_coordinates ():
 		return [
 			(float(row[2]), float(row[3]))
 			for row in reader
-			if row[-3].strip().lower() != "minor"
+			if row[8].strip().lower() != "minor"
 		]
 
 coordinates = load_coordinates()
